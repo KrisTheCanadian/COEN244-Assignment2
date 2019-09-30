@@ -11,5 +11,5 @@ Room::Room(int s_num, int m_room) : m_bed_number(s_num), m_reserve() {
 }
 Room::Room() {};
 unsigned int Room::get_number() { return m_bed_number; }
-unsigned int Room::get_room() { return m_room; }
+int Room::get_room() { return m_room; }
 auto Room::get_reversation() { return m_reserve; }

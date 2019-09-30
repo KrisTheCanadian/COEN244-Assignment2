@@ -3,6 +3,7 @@
 ReservationRequest::ReservationRequest(Guess& guess, int bed_num, Date& checkin, Date& checkout)
 	: m_guess(&guess), m_bed_num(bed_num), m_checkin(checkin), m_checkout(checkout)
 {
+	m_id = s_count;
 	s_count++;
 }
 
@@ -16,6 +17,8 @@ void ReservationRequest::set_checkin(Date& checkin) { m_checkin = checkin; }
 Date ReservationRequest::get_checkin() { return m_checkin; }
 void ReservationRequest::set_checkout(Date& checkout) { m_checkout = checkout; }
 Date ReservationRequest::get_checkout() { return m_checkout; }
+int ReservationRequest::get_id() { return m_id; }
+void ReservationRequest::set_id(int id) { m_id = id; }
 // END OF Get - Set Functions //
 
 
