@@ -1,21 +1,23 @@
 #pragma once
-#include "Guess.h"
+#include "Guest.h"
 
 class ReservationRequest
 {
 	private:
-		Guess* m_guess;
+		Guest* m_guest;
 		static int s_count;
-		int m_id = 0;
+		int m_id = 0; //reservation
 		unsigned int m_requests = 0;
 		unsigned int m_bed_num = 0;
+		Date m_res;
 		Date m_checkin;
 		Date m_checkout;
 	public:
-		ReservationRequest(Guess& guess, int bed_num, Date& checkin, Date& checkout);
+		ReservationRequest();
+		ReservationRequest(Guest& guest, int bed_num, Date& checkin, Date& checkout);
 		// START OF Get - Set Functions //
-		Guess* get_guess();  
-		void set_guess(Guess* other_guess);
+		Guest* get_guest();  
+		void set_guest(Guest* other_guest);
 		unsigned int get_count();
 		void set_bed_num(unsigned int bed_num);
 		unsigned int get_bed_num();
@@ -25,6 +27,9 @@ class ReservationRequest
 		Date get_checkout();
 		int get_id();
 		void set_id(int id);
+		Date get_res();
+		void set_res();
 		// END OF Get - Set Functions //
+		void display();
 };
 

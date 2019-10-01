@@ -1,18 +1,20 @@
 #pragma once
-#include <string>
+#include <iostream>
 #include "Date.h"
-#include "Room.h"
-class Guess
+class Guest
 {
 private:
 	std::string m_name;
 	Date m_birthday;
-	unsigned int m_room;
+	unsigned int m_room = 0;
 public:
-	Guess();
-	~Guess();
+	Guest();
+	~Guest();
+	Guest(std::string name, Date birthday, unsigned int room);
 	std::string get_name();
 	Date get_birthday();
 	unsigned int get_room();
+	void display();
+
 };
 

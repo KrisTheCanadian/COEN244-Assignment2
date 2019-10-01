@@ -1,10 +1,9 @@
 #pragma once
-enum Month { JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, NOV, DEC }; // type definition 
 class Date
 {
 private:
 	unsigned int m_day;
-	Month m_month;
+	unsigned int m_month;
 	unsigned int m_year;
 	
 public:
@@ -15,4 +14,6 @@ public:
 	unsigned int get_day();
 	unsigned int get_year();
 	Date(unsigned int day, int month, unsigned int year);
+	Date();
+	void display();
 };
