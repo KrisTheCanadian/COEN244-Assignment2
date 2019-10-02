@@ -14,7 +14,7 @@ class ReservationRequest
 		Date m_checkout;
 	public:
 		ReservationRequest();
-		ReservationRequest(Guest& guest, int bed_num, Date& checkin, Date& checkout);
+		ReservationRequest(Guest& guest, int bed_num, Date& checkin, Date& checkout, Date& res);
 		// START OF Get - Set Functions //
 		Guest* get_guest();  
 		void set_guest(Guest* other_guest);

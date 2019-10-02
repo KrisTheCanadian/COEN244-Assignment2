@@ -6,14 +6,15 @@ class Guest
 private:
 	std::string m_name;
 	Date m_birthday;
-	unsigned int m_room = 0;
+	int m_room = -1;
 public:
 	Guest();
 	~Guest();
-	Guest(std::string name, Date birthday, unsigned int room);
+	Guest(std::string name, Date birthday);
 	std::string get_name();
 	Date get_birthday();
-	unsigned int get_room();
+	int get_room();
+	void set_room(int room);
 	void display();
 
 };
