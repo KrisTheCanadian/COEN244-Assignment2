@@ -5,14 +5,13 @@ unsigned int HotelManager::reserve(ReservationRequest& res_request) {
 	unsigned int month = res_request.get_res().get_month();
 	unsigned int day = res_request.get_res().get_day();
 
-	Room* room;
 	for (int i = 0; i < m_hotel_size; i++) {
 		if (roomArray[i].get_number() != -1 && roomArray[i].get_number() == res_request.get_bed_num())  //get room number that has the SAME number of beds as requested 
 		{
 			if (roomArray[i].get_reservation(day, month) == 0)
 			{
 				roomArray[i].get_reservation(day, month) == res_request.get_id(); //put the request id
-				return room->get_room(); //returning room number 
+				return roomArray[i].get_room(); //returning room number 
 			}
 		}
 	}
