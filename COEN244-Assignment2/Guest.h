@@ -7,6 +7,7 @@ private:
 	std::string m_name;
 	Date m_birthday;
 	int m_room = -1;
+	int hadi;
 public:
 	Guest();
 	~Guest();
