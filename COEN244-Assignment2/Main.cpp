@@ -7,6 +7,10 @@
 
 void test() 
 {
+	//assume perfect user (according to professor)!!!!!!!
+	//no validation of parameters.
+
+
 	Date checkin1(1, 12, 2019);			//need to add date validations
 	Date checkout1(5, 12, 2019);
 	Date reservation1(4, 12, 2019);
