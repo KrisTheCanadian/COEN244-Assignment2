@@ -15,6 +15,7 @@ public:
 	HotelManager(unsigned int hotel_size, Room room, ReservationRequest res);
 	HotelManager(unsigned int hotel_size, Room room);
 	HotelManager(unsigned int hotel_size);
+	HotelManager(HotelManager& copied);
 	unsigned int reserve(ReservationRequest& res_request);
 	void reservation_display(ReservationRequest& res_request);
 	void reservation_cancel(ReservationRequest& res_request, Date& date);

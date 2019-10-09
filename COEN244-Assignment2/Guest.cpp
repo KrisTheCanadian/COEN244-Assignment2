@@ -10,5 +10,5 @@ void Guest::set_room(int room) { m_room = room; }
 void Guest::display() {
 	std::cout << "[Guest] Name of Guest: " << m_name << std::endl;
 	m_birthday.display();
-	std::cout << "[Guest] Reserved Room number: " << m_room << std::endl;
+	std::cout << "[Guest] Reserved Room number: " << m_room+1 << std::endl;
 }

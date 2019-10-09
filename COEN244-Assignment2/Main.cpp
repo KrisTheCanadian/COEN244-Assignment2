@@ -44,9 +44,9 @@ void test()
 	Hotel1.reservation_cancel(guest1_resrequest, reservation1); //asking for the date of cancellation is no necessary since resrequest holds it.
 	Hotel1.reserve(guest2_resrequest);
 
-	std::cout << "Elon cancels room 0" << std::endl;
+	std::cout << "Elon cancels room 1" << std::endl;
 	Hotel1.reservation_display(guest1_resrequest);
-	std::cout << "Kris booked room 0" << std::endl;
+	std::cout << "Kris booked room 1" << std::endl;
 	Hotel1.reservation_display(guest2_resrequest);
 	
 }

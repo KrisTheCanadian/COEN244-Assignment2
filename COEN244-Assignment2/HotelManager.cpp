@@ -37,6 +37,22 @@ HotelManager::HotelManager(unsigned int hotel_size, Room room) : m_hotel_size(ho
 
 HotelManager::HotelManager(unsigned int hotel_size) : m_hotel_size(hotel_size) {}
 
+HotelManager::HotelManager(HotelManager& copied)
+	: room_array_index(copied.room_array_index), request_array_index(copied.request_array_index),
+	m_hotel_size(copied.m_hotel_size)
+{
+	roomArray = new Room[m_hotel_size];
+	for (int i = 0; i < room_array_index; i++)
+	{
+		roomArray[i] = copied.roomArray[i];
+	}
+	ReservationArray = new ReservationRequest[m_hotel_size];
+	for (int i = 0; i < request_array_index; i++)
+	{
+		ReservationArray[i] = copied.ReservationArray[i];
+	}
+}
+
 void HotelManager::reservation_display(ReservationRequest& res_request) {
 	if (res_request.get_id() == -1 || res_request.get_id() > res_request.get_count()) {
 		std::cout << "[Reservation] This reservation was canceled or Does not Exist" << std::endl;
